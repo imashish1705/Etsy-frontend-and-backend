@@ -1,0 +1,60 @@
+
+.left-side{
+
+ border: 2px solid black;
+}
+.right-side{
+    
+    border: 2px solid brown;
+}
+.right-side-img1 figure{
+    border: 2px solid blue;
+    height: 75px;
+    width: 100px;
+    
+   
+}
+.right-side-img1 figure img{
+    cursor:pointer;
+    padding:2%;
+     height:60px;
+     width:95px;
+     border:0.5px solid pink;
+     -webkit-filter: blur(2px);
+     filter: blur(2px);
+     -webkit-transition: .3s ease-in-out;
+     transition: .3s ease-in-out;
+     border-radius: 10px;
+}
+.right-side-img1 figure:hover img{
+    -webkit-filter: blur(0);
+	filter: blur(0);
+}
+.add_button:hover{
+        
+  
+      
+}
+.button1{
+    width: 70%;
+    border-radius: 24px;
+    border: #222222 2px solid;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 10%;
+    margin-top: 30%;
+    padding: 12px 18px;
+    box-sizing: border-box;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+    
+}
+.button1:hover{
+    transition: all 0.2s;
+    padding: 10px 19px;
+    border-radius: 12px;
+    background-color: rgb(24, 23, 23)
+}

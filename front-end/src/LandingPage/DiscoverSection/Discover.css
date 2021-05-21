@@ -1,0 +1,60 @@
+.discover-title {
+    text-align: center;
+    font-size: 1.4rem;
+  }
+  /* Grid */
+  .discover-tab-list {
+    margin: 0 auto;
+    width: 95%;
+    padding-top: 20px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid rgba(34, 34, 34, 0.15);
+  }
+  
+  .discover-tab-list > li {
+    cursor: pointer;
+    color: black;
+    letter-spacing: 0.05em;
+    padding: 15px 20px;
+  }
+  
+  .discover-tab-list > li:after {
+    background: none repeat scroll 0 0 transparent;
+    transition: width 0.2s ease 0s, left 0.2s ease 0s;
+    bottom: 0;
+    width: 0;
+    left: 50%;
+    height: 2px;
+    content: "";
+    display: block;
+    background: #1b1b1b;
+    margin: 0 auto;
+    transform: translateY(17px);
+  }
+  .discover-tab-list > li:hover:after {
+    width: 100%;
+  }
+  
+  @media (min-width: 381px) and (max-width: 767px) {
+    .discover-tab-list > li:nth-child(1n) {
+      display: none;
+    }
+    .discover-tab-list > li:nth-child(2n) {
+      display: none;
+    }
+    .discover-tab-list > li:nth-child(3n) {
+      display: none;
+    }
+    .discover-tab-list > li:nth-child(4n) {
+      display: none;
+    }
+    .discover-tab-list > li:nth-child(5n) {
+      display: none;
+    }
+    .discover-tab-list > li:nth-child(6n) {
+      display: none;
+    }
+  }
+  

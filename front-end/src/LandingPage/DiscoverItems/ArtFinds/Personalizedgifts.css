@@ -1,0 +1,100 @@
+.grid-container {
+    max-width: 95%;
+  }
+  
+  .pg_product___photo {
+    object-fit: cover;
+    width: 95%;
+    cursor: pointer;
+  }
+  .product___price {
+    font-weight: 700;
+    font-size: 1rem;
+    padding-top: 2px;
+    text-align: left;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-gap: 10px;
+    padding: 10px;
+  }
+  .item1 {
+    grid-row-start: 1;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  
+  .item2 {
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 3;
+    grid-column-end: 3;
+  }
+  
+  .item3 {
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 3;
+    grid-column-end: 3;
+  }
+  
+  .item4 {
+    grid-row-start: 1;
+    grid-row-end: 6;
+    grid-column-start: 4;
+    grid-column-end: 6;
+  }
+  
+  .item5 {
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 6;
+    grid-column-end: 6;
+  }
+  
+  .item6 {
+    grid-row-start: 2;
+    grid-row-end: 2;
+    grid-column-start: 6;
+    grid-column-end: 6;
+  }
+  
+  @media (min-width: 381px) and (max-width: 767px) {
+    .grid-container {
+      display: flex;
+      flex-direction: column;
+    }
+    .grid-container > div {
+      margin: 0 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    .item1 > img {
+      width: 350px;
+      height: 195px;
+    }
+    .item2 > img {
+      width: 350px;
+      height: 195px;
+    }
+  
+    .item3 > img {
+      width: 350px;
+      height: 195px;
+    }
+    .item4 > img {
+      width: 350px;
+      height: 195px;
+    }
+    .item5 > img {
+      width: 350px;
+      height: 195px;
+    }
+    .item6 > img {
+      width: 350px;
+      height: 195px;
+    }
+  }
+  

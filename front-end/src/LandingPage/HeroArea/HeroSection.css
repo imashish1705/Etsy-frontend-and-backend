@@ -1,0 +1,30 @@
+.heroarea__container {
+    background-color: #94d0cc
+  }
+  
+  .hero__title {
+    padding-top: 10px;
+    font-size: 150%;
+    line-height: 36px;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0.5px;
+    margin: 0 auto;
+    width: 95%;
+  }
+  
+  .finds__title {
+    padding-top: 16px;
+    font-size: 100%;
+    line-height: 36px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  
+  @media (min-width: 381px) and (max-width: 767px) {
+    .heroarea__container {
+      width: 100%;
+    }
+  }
+  
