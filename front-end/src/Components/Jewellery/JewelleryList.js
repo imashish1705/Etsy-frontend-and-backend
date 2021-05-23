@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Jewellery from './Jewellery';
 import axios from 'axios';
-import Register from "../../LandingPage/Header/Register";
+//import Register from "../../LandingPage/Header/Register";
 
 class JewelleryList extends Component {
 
@@ -34,7 +34,7 @@ class JewelleryList extends Component {
       
         return (
             <>
-            <Register/>
+            
             <h1 style={{
                 marginLeft:"2%",
                 padding:"2%"

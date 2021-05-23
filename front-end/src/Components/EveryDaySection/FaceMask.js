@@ -4,12 +4,15 @@ class FaceMask extends Component {
     render() {
         return (
             <>
-      <div className="ef__container">
-            <div className="ef__block">
-              <img src={this.props.img} className="ef-img "  alt="" />
-              <div className="ef-title">
+      <div >
+            <div style={{
+              width:"20%",
+              height:"20%"
+            }}>
+              <img src={this.props.img}   alt="" />
+              <div >
                 <Link to={`/facemask/${this.props.id}`}>
-                  <div className="ef-title">{this.props.desc}</div>
+                  <div >{this.props.desc}</div>
                 </Link>
               </div>
             </div>

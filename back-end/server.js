@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require('mongoose');
 const facemask = require('./seedEveryDayFind');
 const seedJewellery = require("./seedJewellery");
-const productRoutes = require('./routes/product');
+const productRoutes = require('./routes/product/product');
 const session = require('express-session');
 const passport = require('passport');
 const LocalStrategy = require('passport-local');
@@ -28,7 +28,8 @@ mongoose.connect('mongodb://localhost:27017/Etsy1',
         console.log("DB Connection Failed");
     });
     
-
+    app.use(express.urlencoded({ extended: true }));
+    
     app.use(session({
         secret: 'thisisnotagoodsecret',
         resave: false,

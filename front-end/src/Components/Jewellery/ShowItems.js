@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-//import { Link } from 'react-router-dom';
 import "./Showitems.css";
 //import { Button } from 'react-bootstrap';
 class Showitems extends Component {
-
+    
     constructor(props) {
         super(props);
         this.state = {
@@ -23,6 +22,17 @@ class Showitems extends Component {
             desc: items.data.desc,
             name:items.data.name
         })
+
+    }
+    submitHandler = async(e)=>{
+        e.preventDefault();
+        await axios.post('http://localhost:4000/user/:id/cart').then(res=>{
+            console.log(res);
+        }).catch(err=>{
+            console.log(err);
+        })
+        // Redirect to /JewelleryPage page
+        this.props.history.push('/user/cart');
     }
 
     render() {
@@ -47,7 +57,14 @@ class Showitems extends Component {
                 <div>{this.state.name}</div>
                 <div>US$ {this.state.price}</div>
                 <div className="button1">
-               <span className="add_button">Add to cart</span>
+
+                
+               <form onSubmit = {this.submitHandler}>
+
+                   <button>Add to cart</button>
+               </form>
+               
+
               </div>
              </div>
                 </div>

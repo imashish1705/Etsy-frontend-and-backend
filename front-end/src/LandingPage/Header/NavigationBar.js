@@ -2,13 +2,27 @@
 import { useState } from "react";
 import "./NavigationBar.css";
 import SearchBar from "./SearchBar";
-import Login from "./Login";
+//import Login from "./Login";
 import { Link } from 'react-router-dom';
 import NavLink from "./NavLink";
-import OutsideClickHandler from "react-outside-click-handler";
+import {Modal} from "react-bootstrap";
+import Login from "./Login";
+import Register from "./Register"
+//import OutsideClickHandler from "react-outside-click-handler";
 function Navbar() {
 
-  const [hidden, setHidden] = useState(false);
+
+  const [show, setShow] = useState(false);
+  const [show2, setModel2] = useState(false);
+
+  const handelCloseModel2 = ()=> setModel2(false);
+  const handelShowModel2 = ()=> setModel2(true);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+
+  //const [hidden, setHidden] = useState(false);
 
   return (
     <>
@@ -70,18 +84,63 @@ function Navbar() {
             </Link>
           </div>
           <SearchBar className="searchinput" />
-          <OutsideClickHandler
-            onOutsideClick={() => {
-              setHidden(false);
-            }}
+          <span className="login--btn"onClick={handleShow}
+         
           >
-            <button onClick={() => setHidden(!hidden)} className="login--btn">
-              {hidden ? "Close" : "Sign in"}
-            </button>
-          </OutsideClickHandler>
-           {hidden && <Login />}
+           Sign in
+      </span>
+      
+
+          <Modal
+        show={show} 
+        onHide={handleClose}
+      >
+        
+        <Modal.Header closeButton>
+          <Modal.Title>
+            <div style={{
+              display:"flex",
+              
+            }}>
+            <span>Sign in </span>
+
+            <div> 
+              
+              <span onClick={handelShowModel2} className="button button-1" style={{
+                position:"relative",
+                left:"240px"
+              }}>register</span>
+              </div>
+              <Modal
+                show={show2}
+                onHide={handelCloseModel2}
+                >
+                  <Modal.Header closeButton>
+                  <Modal.Title>Register Page
+                <Modal.Body>
+          
+                <Register/>
+    
+              </Modal.Body> 
+              </Modal.Title>
+              </Modal.Header>
+              </Modal>
+              </div>
+        </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          
+        <Login/>
+
+        </Modal.Body>
+        
+      </Modal>
+
+
+
+
           <div className="cart_container">
-            <Link href="/cart">
+            <Link to="/user/cart">
               <svg
                 enable-background="new 0 0 511.343 511.343"
                 viewBox="0 0 511.343 511.343"

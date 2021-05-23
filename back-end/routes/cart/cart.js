@@ -4,22 +4,21 @@ const Jewellery = require('../../models/jewellery');
 const { isLoggedIn } = require('../../middleware');
 const User = require('../../models/user');
 
-
 router.get('/user/cart',isLoggedIn,async(req, res) => {
 
     const user = await User.findById(req.user._id).populate('cart');
 
-    res.render('cart/showcart', { cart: user.cart });
+    res.redirect('/user/cart', { cart: user.cart });
 })
 
 
-router.post('/user/:id/cart',isLoggedIn, async(req, res) => {
-
+router.post('/user/:id/cart',isLoggedIn,async(req, res) => {
+   
     const product = await Jewellery.findById(req.params.id);
 
     const user = req.user;
 
-    user.cart.push(product);
+    user.cart.push(product); 
 
     await user.save();
 

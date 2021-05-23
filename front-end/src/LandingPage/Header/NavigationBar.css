@@ -152,4 +152,24 @@
   #menuToggle input:checked ~ ul {
     transform: none;
   }
+ 
+  .button {
+    width: 100px;
+    text-align: center;
+    color: #000;
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  .button-1 {
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 50px;
+    -webkit-transition: all .15s ease-in-out;
+    color: black;
+  }
+  .button-1:hover {
+    box-shadow:  0 0 2px 1px rgb(94, 94, 94);
+    border: 2px solid black;
+  }
   

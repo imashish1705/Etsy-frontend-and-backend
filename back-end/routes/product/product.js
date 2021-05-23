@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const Facemask = require('../models/facemask');
-const Jewellery = require("../models/jewellery");
-const { isLoggedIn } = require('../middleware');
+const Facemask = require('../../models/facemask');
+const Jewellery = require("../../models/jewellery");
+const { isLoggedIn } = require('../../middleware');
 
 router.get('/facemask', async(req, res) => {
     const allfacemask=await Facemask.find({});

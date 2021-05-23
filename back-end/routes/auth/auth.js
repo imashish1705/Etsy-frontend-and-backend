@@ -6,7 +6,7 @@ const passport = require('passport');
 
 // Get signup page
 router.get('/register', (req, res) => {
-    res.render('auth/signup');
+    //res.render('auth/signup');
 })
 
 
@@ -34,7 +34,7 @@ router.get('/login', (req, res) => {
 
 
 // Login the existing user
-router.post('/login', passport.authenticate('local', { failureRedirect: '/login' }), (req, res) => {
+router.post('/login', passport.authenticate('local', { failureRedirect: '/jewellery' }), (req, res) => {
     res.redirect('/');
 })
 
@@ -42,7 +42,7 @@ router.post('/login', passport.authenticate('local', { failureRedirect: '/login'
 // Logout the user from the current session
 router.get('/logout', (req, res) => {
     req.logout();
-    res.redirect('/login');
+    res.redirect('/');
 })
 
 module.exports = router;

@@ -9,6 +9,8 @@ import Footer from "./LandingPage/Footer/Footer";
 import FooterLine from "./LandingPage/Footer/FooterLine";
 import Newsletter from './LandingPage/NewsLetter/NewsLetter';
 import Showitems from "./Components/Jewellery/ShowItems";
+//import CartList from "./Components/Cart/CartList";
+import Cart from "./Components/Cart/Cart";
  class App extends Component {
     render() {
         return (
@@ -19,6 +21,7 @@ import Showitems from "./Components/Jewellery/ShowItems";
            <Route exact path="/facemask" component={FaceMask}/>
            <Route exact path="/jewellery" component={Jewellery}/>
            <Route exact path="/jewellery/:id" component={Showitems}/>
+           <Route exact path="/user/cart" component={Cart}/>
            </Switch>
            <Newsletter/>
            <Footer/>

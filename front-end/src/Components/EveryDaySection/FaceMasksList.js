@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Blog from './FaceMask';
 import axios from 'axios';
-
+//import Login from "../../LandingPage/Header/Login";
 
 
 class FaceMasks extends Component {
@@ -33,6 +33,7 @@ class FaceMasks extends Component {
       
         return (
             <>
+          
            {allBlogs}
             </>
         );

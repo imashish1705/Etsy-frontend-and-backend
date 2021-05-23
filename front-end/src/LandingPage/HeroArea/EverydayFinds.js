@@ -37,6 +37,7 @@ function EverydayFinds() {
   return (
     <>
       <div className="ef__container">
+        
         {EverydayFindsarr.map(function (u) {
           return (
             <div className="ef__block">
@@ -45,6 +46,8 @@ function EverydayFinds() {
                 <Link to={u.url}>
                   <span className="ef-title">{u.title}</span>
                 </Link>
+        
+
               </div>
             </div>
           );

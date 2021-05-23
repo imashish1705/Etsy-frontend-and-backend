@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
 import {Link} from "react-router-dom";
-//import {Card,CardColumns} from "react-bootstrap";
+import "./Showitems.css"
+import  "react-bootstrap";
+
 
 class Jewellery extends Component {
     render() {
         
         return (    
             <>
+            <div className ="container">
+            <div class="row">
+            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
             <div className="Shopourselections__container">
             <div className="productsselection__container">
               <ul className="ul_shop_container">
@@ -30,8 +35,9 @@ class Jewellery extends Component {
 
             </div>
 
-              
-
+            </div>
+            </div>
+            </div>
           </>
         )
     }
