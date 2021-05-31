@@ -24,7 +24,7 @@ import axios from "axios";
    
   submitHandler = async(e) => {
     e.preventDefault();
-    await axios.post('http://localhost:4000/register', this.state);
+    await axios.post('http://localhost:4000/api/signup', this.state);
     // Redirect to /JewelleryPage page
     this.props.history.push('/facemask');
     

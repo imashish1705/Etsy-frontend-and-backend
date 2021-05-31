@@ -8,6 +8,7 @@ import NavLink from "./NavLink";
 import {Modal} from "react-bootstrap";
 import Login from "./Login";
 import Register from "./Register"
+import MenuHeader from "./MenuHeader";
 //import OutsideClickHandler from "react-outside-click-handler";
 function Navbar() {
 
@@ -152,7 +153,7 @@ function Navbar() {
             </Link>
           </div>
         </div>
-        <NavLink />
+        <MenuHeader/>
       </nav>
     </>
   );
