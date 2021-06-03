@@ -9,6 +9,7 @@ const categoryRoutes = require("./src/routes/category");
 const productRoutes = require("./src/routes/product");
 const cartRoutes = require("./src/routes/cart");
 const initialDataRoute = require("./src/routes//admin/initialData");
+const pageRoutes = require("./src/routes/admin/page");
 const cors = require("cors");
 //environment variable or you can say constants
 env.config();
@@ -39,7 +40,8 @@ mongoose.connect('mongodb://localhost:27017/EstyClone',
     app.use("/api",productRoutes);
     app.use("/api",cartRoutes);
     app.use("/api",initialDataRoute);
-
+    app.use("/api", pageRoutes);
+    
     app.listen(process.env.PORT, () => {
         console.log(`Server is running on port ${process.env.PORT}`);
       });

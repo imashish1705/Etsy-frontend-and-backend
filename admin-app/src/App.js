@@ -24,6 +24,7 @@ function App() {
         }
         dispatch(getInitialData());
     },[]);
+    
   return (
     <div>
   

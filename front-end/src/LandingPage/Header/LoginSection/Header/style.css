@@ -1,0 +1,86 @@
+
+  .rightMenu{
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+  }
+.loginButton {
+    display: block;
+    width: 100px;
+    height: 30px;
+    background: #fff;
+    text-align: center;
+    line-height: 30px;
+    color:rgb(235, 83, 28);
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .loginButton:hover {
+    background-color: #c0bebe;
+    border-radius: 50px;
+    transition: 1ms;
+    color:black;
+    
+  }
+.more, .fullName {
+    font-weight: bold;
+    color: black;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    cursor: pointer;
+  }
+.cart {
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px
+  }
+
+.authContainer{
+  color: #212121;
+  margin: 0 auto;
+  border-radius: 2px;
+  height: 528px;
+  max-width: 750px;
+  min-width: 650px;
+}
+.row{
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  height: 528px;
+    max-width: 750px;
+    min-width: 650px;
+}
+
+.leftspace{
+  width: 40%;
+  height: 100%;
+  color: #fff;
+  letter-spacing: 1px;
+  /* background-image: url('../../images/login-image.png'); */
+  background-color: rgb(245, 106, 13);
+  background-repeat: no-repeat;
+  background-position: center 85%;
+  padding: 40px 33px;
+  box-sizing: border-box;
+}
+
+.rightspace{
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loginInputContainer{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 30px;
+  margin: 40px 0;
+}

@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import './style.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { getAllCategory } from '../../../actions';
-
 /**
 * @author
 * @function MenuHeader
@@ -37,11 +36,17 @@ const MenuHeader = (props) => {
     return myCategories;
   }
   return (
+   
     <div className="menuHeader">
       <ul>
         {category.categories.length > 0 ? renderCategories(category.categories) : null}
       </ul>
+      
     </div>
+    
+    
+      
+    
   )
 
 }

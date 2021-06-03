@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {useEffect} from 'react'
 import { Route,Switch } from 'react-router';
 import LandingPage from "./LandingPages";
 import FaceMask from "./Components/EveryDaySection/FaceMasksList";
@@ -10,9 +10,20 @@ import FooterLine from "./LandingPage/Footer/FooterLine";
 import Newsletter from './LandingPage/NewsLetter/NewsLetter';
 import Showitems from "./Components/Jewellery/ShowItems";
 //import CartList from "./Components/Cart/CartList";
+import { useDispatch, useSelector } from "react-redux";
+import { isUserLoggedIn, updateCart } from "./actions";
 import Cart from "./Components/Cart/Cart";
- class App extends Component {
-    render() {
+ const App = (props)=> {
+
+    const dispatch = useDispatch();
+    const auth = useSelector((state) => state.auth);
+    
+    useEffect(() => {
+      if (!auth.authenticate) {
+        dispatch(isUserLoggedIn());
+      }
+    }, [auth.authenticate]);
+
         return (
             <div>
                 <NavigationBar/>
@@ -29,5 +40,5 @@ import Cart from "./Components/Cart/Cart";
            </div>
         )
     }
-}
+
 export default App;
