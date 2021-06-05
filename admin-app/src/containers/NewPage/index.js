@@ -33,14 +33,14 @@ const NewPage = (props) => {
 
     useEffect(() => {
         console.log(page);
-        // if(!page.loading){
+        if(!page.loading){
             setCreateModal(false);
             setTitle('');
             setCategoryId('');
             setDesc('');
             setProducts([]);
             setBanners([]);
-        //}
+        }
     }, [page]);
 
     const onCategoryChange = (e) => {
@@ -191,9 +191,9 @@ const NewPage = (props) => {
     return (
         <Layout sidebar>
             {
-                // page.loading ? 
-                // <p>Creating Page...please wait</p>
-                // :
+                page.loading ? 
+                <p>Creating Page...please wait</p>
+                :
                 <>
                     {renderCreatePageModal()}
                     <button onClick={() => setCreateModal(true)}>Create Page</button>

@@ -1,5 +1,5 @@
+import { authConstants } from "./constants";
 import axios from "../helpers/axios";
-import { authConstants } from "./constants"
 
 export const login = (user) => {
 
@@ -32,7 +32,6 @@ export const login = (user) => {
         }
     }
 }
-
 
 export const isUserLoggedIn = () => {
     return async dispatch => {

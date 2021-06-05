@@ -33,7 +33,7 @@ export default function Signin() {
         <>
          <Layout>
             <Container>
-                <Row style={{ marginTop: '50px' }}>
+                <Row style={{ marginTop: '100px' }}>
                     <Col md={{span: 6, offset: 3}}>
                         <Form onSubmit={userLogin}>
                             <Input 
@@ -51,7 +51,9 @@ export default function Signin() {
                                 type="password"
                                 onChange={(e) => setPassword(e.target.value)}
                             />
-                            <Button variant="primary" type="submit">
+                            <Button
+                            style= {{marginTop:"10px"}}
+                            variant="primary" type="submit">
                                 Submit
                             </Button>
                         </Form>

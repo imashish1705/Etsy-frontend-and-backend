@@ -44,8 +44,10 @@ const buildNewCategories = (parentId, categories, category) => {
                 children: cat.children ? buildNewCategories(parentId, cat.children, category) : []
             });
         }
-      
+
+        
     }
+
 
     return myCategories;
 }

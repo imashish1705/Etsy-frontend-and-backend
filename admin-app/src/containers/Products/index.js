@@ -1,16 +1,17 @@
-import Input from "../../components/UI/Input"
-import { Container, Row, Col, Table } from "react-bootstrap";
-import React, { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from "react-redux";
+import React, { useState } from "react";
 import Layout from "../../components/Layout";
+import { Container, Row, Col, Table } from "react-bootstrap";
+import Input from "../../components/UI/Input";
 import Modal from "../../components/UI/Modal";
-import {generatePublicUrl} from "../../urlConfig";
+import { useSelector, useDispatch } from "react-redux";
 import { addProduct, deleteProductById } from "../../actions";
+import {generatePublicUrl} from "../../urlConfig";
 import "./style.css";
+
 /**
-* @author
-* @function Product
-**/
+ * @author
+ * @function Products
+ **/
 
 const Products = (props) => {
   const [name, setName] = useState("");
